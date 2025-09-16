@@ -1,0 +1,41 @@
+package locators;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import java.util.List;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+
+public class locatorsclass {
+
+	public static void main(String[] args) {
+		WebDriver driver=new ChromeDriver();
+        driver.get("https://www.demoblaze.com/index.html");
+        driver.manage().window().maximize();
+        //name
+        //driver.findElement(By.name("search")).sendKeys("mac");
+        
+        //id
+      // boolean logoDisplaystatus=driver.findElement(By.id("nava")).isDisplayed();
+        //System.out.println(logoDisplaystatus);
+        
+        //linktext
+       // driver.findElement(By.linkText("Log in")).click();
+        
+        //partialLinkText
+        //driver.findElement(By.partialLinkText("Sign")).click();
+        
+        //ClassName
+        //List<WebElement>headLinks=driver.findElements(By.className("nav-item"));
+        //System.out.println("No.Of Header Links:"+headLinks.size());
+        
+        //tagName
+        //List<WebElement>links=driver.findElements(By.tagName("a"));
+        //System.out.println("No.Of Links:"+links.size());
+        
+	}
+
+}
