@@ -1,0 +1,43 @@
+package WebDriverMethods;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class ConditionalMethods {
+
+	public static void main(String[] args) {
+		WebDriver driver= new ChromeDriver();
+		driver.get("https://testautomationpractice.blogspot.com/");
+		driver.manage().window().maximize();
+		
+		//isDisplayed()
+		/*WebElement logo=driver.findElement(By.xpath("//img[@alt='nopCommerce demo store']"));
+		System.out.println("logo:"+logo.isDisplayed());*/
+		
+		//isEnabled()
+//		boolean Status=driver.findElement(By.xpath(" //input[@id='name']")).isEnabled();
+//		System.out.println(Status);
+		
+		//isSelected()
+		WebElement male_rd=driver.findElement(By.xpath("//input[@id='male']"));
+		WebElement female_rd=driver.findElement(By.xpath("//input[@id='female']"));
+		System.out.println("Before Selection");
+		System.out.println(male_rd.isSelected());
+		System.out.println(female_rd.isSelected());
+		
+//		male_rd.click();
+//		System.out.println("After Selection Male");
+//		System.out.println(male_rd.isSelected());
+//		System.out.println(female_rd.isSelected());
+	
+//		female_rd.click();
+//		System.out.println("After Selection female");
+//		System.out.println(male_rd.isSelected());
+//		System.out.println(female_rd.isSelected());
+		
+		driver.close();
+	}
+
+}
